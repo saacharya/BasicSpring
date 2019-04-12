@@ -25,7 +25,7 @@ public class GreetingControllerTests {
     public void noParamDefaultMessage() throws Exception {
 
         this.mockMvc.perform(get("/autoincrease")).andDo(print()).andExpect(status().isOk())
-                .andExpect(jsonPath("$.content").value("Welcome Santosh"));
+                .andExpect(jsonPath("$.content").value("Welcome Someone"));
     }
 
     @Test

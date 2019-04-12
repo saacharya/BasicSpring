@@ -13,7 +13,7 @@ public class GreetingController {
     private final AtomicLong counter = new AtomicLong();
 
     @RequestMapping("/autoincrease")
-    public Greeting greeting(@RequestParam(value="name", defaultValue="Santosh") String name) {
+    public Greeting greeting(@RequestParam(value="name", defaultValue="Someone") String name) {
         return new Greeting(counter.incrementAndGet(),
                             "Welcome "+ name);
     }
